@@ -1,0 +1,6 @@
+[submodule "django_rest_api-api"]
+	path = django_rest_api-api
+	url = https://github.com/dtheetla/django_rest_api-api
+[submodule "django_rest_api-react"]
+	path = django_rest_api-react
+	url = https://github.com/dtheetla/django_rest_api-react

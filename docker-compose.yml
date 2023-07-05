@@ -1,0 +1,27 @@
+version: '3.9'
+services:
+  api:
+    restart: always
+    build: ./django-api
+    container_name: django-api
+    ports:
+      - 9000:9000
+    environment:
+      DEBUG: 'true'
+    entrypoint: ["python", "manage.py", "runserver", "0.0.0.0:9000"]
+    volumes:
+      - django-api:/code
+volumes:
+  django-api:
+
+  # web:
+  #   restart: always
+  #   build: ./react-fe
+  #   container_name: react-fe
+  #   ports:
+  #     - 3000:3000
+  #   environment:
+  #     DEBUG: 'true'
+  #   entrypoint: ["npm", "start"]
+  #   volumes:
+  #     - ./react-fe:/code    
